@@ -4,23 +4,17 @@ const app = express();
 const hbs = require("hbs");
 const bcrypt =require("bcryptjs");
 
-// var password = require("passport");
-// var router = express.Router();
-// var User =require("..models/user");
-// var Campground = require("../models/campgrund");
 
 require("./db/conn");
-// require("./db/db");
+
 
 const Register = require("./models/registers");
-// const Contactu = require("./models/contactus");
 
-// const Contactu = require("./models/contactus");
 const {json} =require("express");
 const { Mongoose } = require("mongoose");
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 const static_path = path.join(__dirname, "../public");
 const templates_path = path.join(__dirname, "../templates/views");
 const partials_path = path.join(__dirname, "../templates/partials");
@@ -104,8 +98,7 @@ app.post("/register", async (req, res) => {
                 Password : Password,
                 ConfirmPassword : cPassword
             })
-// We have to hash  or incrypt before save
-// this is consept of middleware-> working b/w two things
+
 //see im register.js
             const  registered = await registerEmployee.save();
             // res.status(201).render("index");
@@ -133,7 +126,6 @@ app.post("/login", async (req, res) => {
    //    console.log(useremail);
 // if (useremail.Password===password)
  if(isMatch){
-    // res.status(201).render("index");
     res.status(201).render("index1");
 
 }else{
@@ -145,24 +137,8 @@ app.post("/login", async (req, res) => {
    }
 });
 
-
-// const employeeController = require('./controllers/employeeController');
-
-// app.use('/employee',employeeController);
-
 app.listen(port, ()=>{
     console.log(`server is running at port no ${port}`);
 })
 
 
-
-// //extra
-// const port = process.env.MONGO_URL || "mongodb://localhost/kitten_db";
-// Mongoose.connect(url,{useNewUrlParser:true, useUnifiedTopology: true})
-// .then(async()=>{
-//     await kittenDB.bootstrap();
-//     await app.listen(port);
-//     console.log(`Kitten API running on port${port}!`);
-
-// })
-// .catch(error => console.error(error));

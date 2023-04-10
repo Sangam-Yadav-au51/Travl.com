@@ -92,22 +92,7 @@ let suggestions = [
     "nandaDevi",
     "padmanabhaswamyTemple",
     "amerFort",
-    // "Facebook",
-    // "Freelancer",
-    // "Facebook Page",
-    // "Designer",
-    // "Developer",
-    // "Web Designer",
-    // "Web Developer",
-    // "Login Form in HTML & CSS",
-    // "How to learn HTML & CSS",
-    // "How to learn JavaScript",
-    // "How to became Freelancer",
-    // "How to became Web Designer",
-    // "How to start Gaming Channel",
-    // "How to start YouTube Channel",
-    // "What does HTML stands for?",
-    // "What does CSS stands for?",
+   
 ];
 // getting all required elements
 const searchWrapper = document.querySelector(".search-input");
@@ -125,7 +110,7 @@ inputBox.onkeyup = (e)=>{
         icon.onclick = ()=>{
 //             webLink = "https://travlin.herokuapp.com/" + userData; 
 webLink = document.location.origin+"/" + userData;
-// webLink = "http://localhost:3000/" + userData;
+// webLink = "http://localhost:5000/" + userData;
 
             linkTag.setAttribute("href", webLink);
             console.log(webLink);

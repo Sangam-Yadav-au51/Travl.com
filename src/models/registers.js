@@ -52,26 +52,3 @@ module.exports = Register;
 
 
 
-// const ContactuSchema = new mongoose.Schema({
-//     Name:{
-//         type:String,
-//         required:true
-//     },
-
-
-//     Email:{
-//         type:String,
-//         required:true,
-//         unique:true
-//     },
-
-
-//    Subject :{
-//         type:String,
-//         required:true
-//     },
-
-// });
-// // const  = new
-//  mongoose.model("Contactu" , ContactuSchema);
-// // module.exports = ;
